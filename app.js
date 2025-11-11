@@ -191,20 +191,25 @@
 //     console.log("Bu son 10 dan kichik yoki teng");
 // }
 
-function getFullName() {
-  const name = prompt('Enter your name') || 'default';
-  const surname = prompt('Enter your surname') || 'default';
-  return { name, surname };  
-}
 
-function toUpperCase(fullName) {
-  return {
-    name: fullName.name.toUpperCase(),
-    surname: fullName.surname.toUpperCase()
-  };
-}
 
-const Java = getFullName();
-const upperJava = toUpperCase(Java);
+// exercise
 
-console.log(upperJava);
+
+// function getFullName() {
+//   const name = prompt('Enter your name') || 'default';
+//   const surname = prompt('Enter your surname') || 'default';
+//   return { name, surname };  
+// }
+
+// function toUpperCase(fullName) {
+//   return {
+//     name: fullName.name.toUpperCase(),
+//     surname: fullName.surname.toUpperCase()
+//   };
+// }
+
+// const Java = getFullName();
+// const upperJava = toUpperCase(Java);
+
+// console.log(upperJava);
