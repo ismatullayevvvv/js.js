@@ -14,9 +14,9 @@ function offAll() {
   greenP.classList.remove("active");
 }
 
-function trafficLight(redTime, greenTime) {
-  let time = redTime;
+function trafficLight(redTime, greenTime, yellowTime = 3) {
   let mode = "red";
+  let time = redTime;
 
   interval = setInterval(() => {
     offAll();
@@ -25,24 +25,32 @@ function trafficLight(redTime, greenTime) {
       redP.classList.add("active");
       redSec.textContent = time;
 
-      if (time <= 3) {
-        yellowP.classList.add("active");
-        yellowSec.textContent = time;
+      if (time === 0) {
+        mode = "yellowAfterRed";
+        time = yellowTime;
       }
+    } 
+    else if (mode === "yellowAfterRed") {
+      yellowP.classList.add("active");
+      yellowSec.textContent = time;
 
       if (time === 0) {
         mode = "green";
         time = greenTime;
       }
-    } 
+    }
     else if (mode === "green") {
       greenP.classList.add("active");
       greenSec.textContent = time;
 
-      if (time <= 3) {
-        yellowP.classList.add("active");
-        yellowSec.textContent = time;
+      if (time === 0) {
+        mode = "yellowAfterGreen";
+        time = yellowTime;
       }
+    }
+    else if (mode === "yellowAfterGreen") {
+      yellowP.classList.add("active");
+      yellowSec.textContent = time;
 
       if (time === 0) {
         mode = "red";
@@ -53,6 +61,8 @@ function trafficLight(redTime, greenTime) {
     time--;
   }, 1000);
 }
+
+// Boshlash
 offAll();
 redP.classList.add("active");
 redSec.textContent = 15;
