@@ -1,0 +1,36 @@
+.background-image {
+    width: 35%;
+    height: 750px;
+    margin-left: 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../js.js/img/trafficlight.png);
+}
+
+.highlighters {
+    position: absolute;
+    text-align: center;
+    width: 20%;
+    height: 50px;
+    font-size: 220px;
+    margin-top: -67.4%;
+    margin-left: 43.2%;
+}
+
+.highlighters p {
+  opacity: 0.2;
+  transition: opacity 0.4s ease;
+}
+
+.highlighters p.active {
+  opacity: 1;
+}
+
+
+.seconds {
+    font-size: 25px;
+    margin-left: 40%; 
+    margin-top: -30%;
+}
+
